@@ -13,6 +13,10 @@ body {
       font-family: 'manrope', sans-serif;
 }
 
+body::-webkit-scrollbar {
+      display: none;
+}
+
 /* NAVBAR */
 
 .navbar {
