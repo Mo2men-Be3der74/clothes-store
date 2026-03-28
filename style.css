@@ -11,10 +11,7 @@ a {
 
 body {
       font-family: 'manrope', sans-serif;
-}
-
-body::-webkit-scrollbar {
-      display: none;
+      -ms-overflow-style: none;
 }
 
 /* NAVBAR */
@@ -29,6 +26,7 @@ body::-webkit-scrollbar {
       padding: 50px;
       position: sticky;
       top: 0;
+      z-index: 100;
 
 }
 
@@ -92,7 +90,7 @@ body::-webkit-scrollbar {
 .confidence {
       width: 100%;
       height: 797px;
-      background-image: url("images/unnamed.png");
+      background-image: url("photos/unnamed.png");
       background-size: cover;
       background-position: center;
       display: flex;
@@ -151,13 +149,13 @@ body::-webkit-scrollbar {
       border: none;
       outline: none;
       box-shadow: none;
-      transition: background-color 0.5s ease;
+      transition:  0.5s ease;
 }
 
 .confidence .shop-now:hover {
       background-color: #2F3331;
       cursor: pointer;
-      transition: background-color 0.5s ease;
+      transition:  0.5s ease;
 }
 
 .confidence .lookbook {
@@ -173,11 +171,202 @@ body::-webkit-scrollbar {
       border: none;
       outline: none;
       box-shadow: none;
-      transition: background-color 0.5s ease;
+      transition:  0.5s ease;
 }
 
 .confidence .lookbook:hover {
       background-color: #C9C6C5;
       cursor: pointer;
-      transition: background-color 0.5s ease;
+      transition:  0.5s ease;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.item.big {
+  grid-row: 1 / 3;
+  height: 620px;
+}
+
+.item.small {
+  height: 308px;
+}
+
+.item .photo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s ease;
+}
+
+.item:hover .photo {
+  transform: scale(1.02);
+}
+
+.men-photo {
+  background-image: url("photos/c80b203d4bca503bb241527cb5d7bdf6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.women-photo {
+  background-image: url("photos/2f336727304f80b774d370d0b9dd31b0.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.kids-photo {
+  background-image: url("photos/d2d4d838bdd4db2456576fdf18ee6154.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.item .dark {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+}
+
+.item .info {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+}
+
+.item .info h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.item .info a {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.53);
+  padding-bottom: 2px;
+}
+
+
+/* TRENDING NOW */
+
+.trending {
+  padding: 80px;
+  background-color: white;
+}
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.section-top h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.section-top a {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #5c605d;
+  border-bottom: 1px solid #5c605d;
+  padding-bottom: 1px;
+}
+
+.section-top a:hover {
+  color: #2f3331;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+  gap: 50px;
+}
+
+
+.product .product-img {
+  width: 100%;
+  height: 450px;
+  margin-bottom: 15px;
+}
+
+.product .product-img div {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.product:hover .product-img div {
+  transform: scale(1.02);
+}
+
+.coat-img {
+      background-image: url("photos/dd28b291cb6d20680e12f5468149b0ba.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      
+}
+
+.dress-img {
+      background-image: url("photos/c4d76ed4f78a445275410796cb6f3c58.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+}
+
+.boot-img {
+      background-image: url("photos/8362c547c358ecf2e6fbc2674fd699a8.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+}
+
+.tee-img 
+{
+      background-image: url("photos/773379858d28da59d36813fca43cc980.jpg");
+      background-size: cover;
+      background-position: center;
+}
+
+
+.product h4 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.product .sub {
+  font-size: 13px;
+  color: #5c605d;
+  margin-bottom: 5px;
+}
+
+.product .price {
+  font-size: 15px;
+  font-weight: 500;
 }
