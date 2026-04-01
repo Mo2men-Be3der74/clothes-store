@@ -97,6 +97,10 @@ body::selection {
       transition: color 0.5s ease, font-size 0.5s ease;
 }
 
+.nav-links .sales:hover {
+      color: red;
+}
+
 /* CONFIDENCE SECTION */
 
 .confidence {
@@ -302,11 +306,16 @@ body::selection {
 }
 
 
-/* TRENDING NOW */
+/* sales */
 
-.trending {
+.sales-section {
       padding: 80px;
       background-color: white;
+}
+
+.section-top .head-sales:hover {
+      color: red;
+      cursor: pointer;
 }
 
 .section-top {
