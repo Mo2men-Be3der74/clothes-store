@@ -120,9 +120,7 @@ body::selection {
 }
 
 .confidence-photo {
-      background-image: url("photos/unnamed.png");
-      background-size: cover;
-      background-position: center;
+      background: url("photos/unnamed.png") center/cover no-repeat;
       width: 100%;
       height: 100%;
       position: absolute;
@@ -130,9 +128,7 @@ body::selection {
       left: 0;
       z-index: -1;
       transition: transform 0.6s ease;
-      position: absolute;
       inset: 0;
-      background: url("photos/unnamed.png") center/cover no-repeat;
 }
 
 .confidence:hover .confidence-photo {
@@ -314,7 +310,6 @@ body::selection {
 }
 
 .section-top .head-sales:hover {
-      color: red;
       cursor: pointer;
 }
 
@@ -435,10 +430,12 @@ body::selection {
 
 /* * not sure if its good to make the suit transform */
 
+/*
 .suit-photo:hover {
       transform: scale(1.02);
       transition: transform 0.6s ease;
 }
+*/
 
 .suit-info {
       width: 615px;
@@ -541,6 +538,7 @@ footer {
 
 .footer-brand .socials-icons {
       display: flex;
+      flex-direction: column;
       gap: 10px;
 }
 
@@ -610,4 +608,102 @@ footer {
 
 .footer-bottom .legal a:hover {
       color: rgba(250, 249, 247, 0.5);
+}
+
+@media (max-width: 767px) {
+
+      /* Navbar */
+      .navbar {
+            padding: 0 20px;
+            height: 64px;
+      }
+
+      .navbar .nav-links,
+      .icons {
+            gap: 10px;
+      }
+
+      /* Hero */
+      .confidence {
+            height: 580px;
+            padding: 50px 28px;
+      }
+
+      .confidence .title {
+            font-size: 40px;
+            width: 100%;
+            height: auto;
+      }
+
+
+      .description {
+            font-size: 15px;
+            width: 100%;
+            height: auto;
+            line-height: 26px;
+      }
+
+      .confidence .shop-now,
+      .confidence .lookbook {
+            width: 150px;
+            height: 48px;
+            font-size: 13px;
+      }
+
+      /* Category grid */
+      .category-grid {
+            grid-template-columns: 1fr;
+      }
+
+      .item.big {
+            grid-row: auto;
+            height: 360px;
+      }
+
+      .item.small {
+            height: 260px;
+      }
+
+      /* Sales */
+      .sales-section {
+            padding: 50px 20px;
+      }
+
+      .products {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+      }
+
+      .product .product-img {
+            height: 280px;
+      }
+
+      /* Suit */
+      .suit {
+            flex-direction: column;
+            padding: 50px 24px;
+            height: auto;
+            align-items: center;
+      }
+
+      .suit-photo {
+            width: 100%;
+            height: 620px;
+      }
+
+      .suit-info {
+            width: 100%;
+            padding: 30px;
+            margin: 0;
+      }
+
+      .suit-info .header {
+            font-size: 30px;
+      }
+
+      /* Footer */
+      .footer-top {
+            grid-template-rows: 1fr;
+            gap: 25px;
+      }
 }
