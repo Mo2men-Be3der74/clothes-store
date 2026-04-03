@@ -87,6 +87,7 @@ body::selection {
       transition: color 0.5s ease, font-size 0.5s ease;
 }
 
+
 .nav-links a {
       color: #5C605D;
       transition: color 0.5s ease, font-size 0.5s ease;
@@ -156,16 +157,22 @@ body::selection {
       margin-bottom: 20px;
 }
 
-.description {
+.confidence .description {
       color: #5C605D;
       font-family: 'manrope', sans-serif;
       font-weight: 400;
       font-size: 18px;
-      width: 445px;
-      height: 88px;
+      max-width: 445px;
       margin-bottom: 20px;
       text-wrap: wrap;
       line-height: 30px;
+}
+
+.suit-info .description {
+      font-size: 18px;
+      color: #5C605D;
+      line-height: 30px;
+      max-width: 100%;
 }
 
 .confidence .buttons {
@@ -439,18 +446,14 @@ body::selection {
 */
 
 .suit-info {
-      width: 615px;
-      height: 491px;
+      flex: 1;
+      min-width: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       gap: 16px;
-      padding-right: 58px;
-      padding-bottom: 85px;
-      padding-top: 85px;
-      padding-left: 0px;
-      margin: 59px;
+      padding: 40px 40px 40px 48px;
 }
 
 .suit-info .title {
@@ -466,7 +469,7 @@ body::selection {
       font-weight: 700;
 }
 
-suit-info .description {
+.suit-info .description {
       font-size: 18px;
       color: #5C605D;
       line-height: 30px;
@@ -611,7 +614,7 @@ footer {
       color: rgba(250, 249, 247, 0.5);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
       body,
       html {
@@ -652,7 +655,7 @@ footer {
             line-height: 1.15;
       }
 
-      .description {
+      .confidence .description {
             font-size: 15px;
             width: 100%;
             height: auto;
@@ -702,12 +705,12 @@ footer {
       }
 
       .products {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             gap: 16px;
       }
 
       .product .product-img {
-            height: 240px;
+            height: 400px;
       }
 
       .product h4 {
@@ -730,7 +733,7 @@ footer {
 
       .suit-photo {
             width: 100%;
-            height: 420px;
+            height: 600px;
       }
 
       .suit-info {
