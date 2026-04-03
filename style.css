@@ -666,7 +666,7 @@ footer {
 
       .confidence .shop-now,
       .confidence .lookbook {
-            width: 100%;
+            width: 150px;
             max-width: 320px;
             height: 50px;
             font-size: 14px;
