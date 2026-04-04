@@ -65,7 +65,6 @@ body::selection {
       font-size: 15px;
       padding: 0;
       margin: 0;
-      display: flex;
 }
 
 .navbar .icons {
@@ -770,5 +769,101 @@ footer {
 
       .footer-bottom {
             gap: 20px;
+      }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+      body,
+      html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+      }
+
+      /* Navbar */
+      .navbar {
+            padding: 30px;
+      }
+
+
+      /* Hero */
+      .confidence {
+            height: 660px;
+            padding: 70px 50px;
+      }
+
+      .confidence .title {
+            font-size: 52px;
+            width: 100%;
+            height: auto;
+      }
+
+      .confidence .description {
+            font-size: 16px;
+            height: auto;
+      }
+
+
+      /* Category grid */
+      .item.big {
+            height: 500px;
+      }
+
+      .item.small {
+            height: 247px;
+      }
+
+
+      /* Sales */
+      .sales-section {
+            padding: 60px 30px;
+      }
+
+      .products {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+      }
+
+
+      .product .product-img {
+            height: 400px;
+      }
+
+      /* Suit */
+      .suit {
+            padding: 50px 30px;
+            height: auto;
+            gap: 20px;
+      }
+
+      .suit-photo {
+            width: 320px;
+            height: 460px;
+
+      }
+
+
+      .suit-info {
+            margin: auto;
+
+      }
+
+      .suit-info .header {
+            font-size: 36px;
+      }
+
+      .suit,
+      .header,
+      .description {
+            margin: auto;
+      }
+
+
+      /* Footer */
+      .footer-top {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 35px;
       }
 }
