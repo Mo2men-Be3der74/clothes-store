@@ -873,3 +873,87 @@ footer {
             gap: 35px;
       }
 }
+
+@media (min-width: 1025px) {
+
+      body,
+      html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+      }
+
+      /* Navbar */
+      .navbar {
+            padding: 40px;
+      }
+
+      /* Hero */
+      .confidence {
+            width: 100%;
+            height: 720px;
+            padding: 80px 40px;
+      }
+
+      .confidence .title {
+            font-size: 48px;
+            width: 100%;
+            height: auto;
+      }
+
+      .confidence .description {
+            font-size: 16px;
+            width: 100%;
+            height: auto;
+            line-height: 28px;
+      }
+
+      /* Category grid */
+
+      .item.big,
+      .item.small {
+            grid-template-columns: repeat(2, 1fr);
+      }
+
+      /* Sales */
+      .sales-section {
+            padding: 70px 40px;
+      }
+
+      .products {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+      }
+
+      .product .product-img {
+            height: 650px;
+      }
+
+      /* Suit */
+      .suit {
+            padding: 60px 40px;
+            height: auto;
+            gap: 30px;
+      }
+
+      .suit-photo {
+            width: 400px;
+            height: 560px;
+      }
+
+      .suit-info {
+            margin: auto;
+      }
+
+      .suit-info .header {
+            font-size: 42px;
+      }
+
+      /* Footer */
+      .footer-top {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+      }
+
+}
