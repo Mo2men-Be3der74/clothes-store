@@ -67,6 +67,10 @@ body::selection {
       margin: 0;
 }
 
+.hamburger {
+      display: none;
+}
+
 .navbar .icons {
       display: flex;
       justify-content: space-around;
@@ -295,9 +299,9 @@ body::selection {
 
 .item .info h3 {
       font-family: 'Manrope', sans-serif;
-      font-size: 22px;
+      font-size: 15px;
       font-weight: 700;
-      color: white;
+      color: #333333;
       margin-bottom: 8px;
 }
 
@@ -307,10 +311,13 @@ body::selection {
       letter-spacing: 3px;
       text-transform: uppercase;
       color: rgba(0, 0, 0, 0.53);
-
-      padding-bottom: 2px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.53);
+      transition: color 0.5s ease;
 }
 
+.item .info a:hover {
+      color: #2f3331;
+}
 
 /* sales */
 
@@ -343,8 +350,8 @@ body::selection {
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: #5c605d;
-      border-bottom: 1px solid #5c605d;
-      padding-bottom: 1px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.53);
+      transition: color 0.5s ease;
 }
 
 .section-top a:hover {
@@ -634,13 +641,45 @@ footer {
       }
 
       .navbar .nav-links {
-            display: none;
+            position: absolute;
+            top: 64px;
+            left: -100%;
+            width: 100%;
+            background: white;
+            flex-direction: column;
+            text-align: center;
+            transition: 0.3s ease;
+            padding: 20px 0;
       }
 
+
+      .navbar .nav-links.open {
+            left: 0;
+      }
 
       .navbar .icons {
             gap: 14px;
             font-size: 16px;
+      }
+
+      .hamburger {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+      }
+
+      .nav-links {
+            position: absolute;
+            top: 70px;
+            left: -100%;
+            width: 100%;
+            background: white;
+            flex-direction: column;
+            text-align: center;
+            transition: 0.3s;
+            padding: 20px 0;
       }
 
       /* Hero */

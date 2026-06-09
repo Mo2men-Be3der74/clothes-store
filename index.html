@@ -14,23 +14,28 @@
 </head>
 
 <body>
-  <nav class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="nav_left">
       <a href="#" class="logo">MOODK</a>
 
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Kids</a></li>
-        <li><a href="#sales" class="sales">Sales</a></li>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#" class="nav-link">Home</a></li>
+        <li><a href="#" class="nav-link">Men</a></li>
+        <li><a href="#" class="nav-link">Women</a></li>
+        <li><a href="#" class="nav-link">Kids</a></li>
+        <li><a href="#sales" class="nav-link sales">Sales</a></li>
       </ul>
     </div>
+
     <div class="icons">
       <i class="fa-solid fa-magnifying-glass"></i>
       <i class="fa-solid fa-cart-shopping"></i>
       <i class="fa-solid fa-circle-user"></i>
     </div>
+
+    <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
   </nav>
 
   <div class="confidence">
@@ -53,7 +58,7 @@
       <div class="dark"></div>
       <div class="info">
         <h3>Menswear</h3>
-        <a href="#">Discover Collection</a>
+        <a href="#">Explore More</a>
       </div>
     </div>
 
@@ -62,7 +67,7 @@
       <div class="dark"></div>
       <div class="info">
         <h3>Womenswear</h3>
-        <a href="#">Shop</a>
+        <a href="#">Explore More</a>
       </div>
     </div>
 
@@ -203,6 +208,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 
 </html>
