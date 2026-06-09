@@ -102,6 +102,11 @@ body::selection {
       transition: color 0.5s ease, font-size 0.5s ease;
 }
 
+.nav-links a.active {
+      color: #2F3331;
+}
+
+
 .nav-links .sales:hover {
       color: red;
 }
