@@ -236,42 +236,45 @@ body::selection {
       cursor: pointer;
 }
 
+
+
 .item.big {
       grid-row: 1 / 3;
-      height: 620px;
+      height: 800px;
 }
 
 .item.small {
-      height: 308px;
+      height: 395px;
 }
 
-.item .photo {
+.item img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
       position: absolute;
       top: 0;
       left: 0;
       transition: transform 0.6s ease;
 }
 
-.item:hover .photo {
+.item:hover img {
       transform: scale(1.02);
 }
 
 .men-photo {
-      background-image: url("photos/c80b203d4bca503bb241527cb5d7bdf6.jpg");
+      background-image: url("photos/men.png");
       background-size: cover;
       background-position: center;
 }
 
 .women-photo {
-      background-image: url("photos/2f336727304f80b774d370d0b9dd31b0.jpg");
+      background-image: url("photos/women.png");
       background-size: cover;
       background-position: center;
 }
 
 .kids-photo {
-      background-image: url("photos/d2d4d838bdd4db2456576fdf18ee6154.jpg");
+      background-image: url("photos/kids.png");
       background-size: cover;
       background-position: center;
 }
