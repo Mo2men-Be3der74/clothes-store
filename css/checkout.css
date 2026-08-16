@@ -18,31 +18,28 @@
 .checkout-breadcrumb {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+  gap: 10px;
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 35px;
+  letter-spacing: 0.5px;
 }
 
 .checkout-breadcrumb a {
-  color: #888888;
+  color: #555;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .checkout-breadcrumb a:hover {
-  color: #111111;
+  color: #000;
 }
 
 .checkout-breadcrumb span.separator {
-  color: #cccccc;
-  font-size: 10px;
+  color: #ccc;
+  font-size: 11px;
 }
 
-.checkout-breadcrumb span.active {
-  color: #111111;
-}
 
 .checkout-header {
   display: flex;
