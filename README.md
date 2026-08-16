@@ -113,7 +113,7 @@ Possible future improvements include:
 
 ## 👨‍💻 Developer
 
-**Marwan Mohamed**
+**Marwan Mohamed** ,
 **Moamen Bedair**
 
 ---
