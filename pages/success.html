@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOODK</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="../css/checkout.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav_left">
+      <a href="../index.html" class="logo">MOODK</a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li class="mega-parent">
+          <a href="#" class="nav-link">
+            Shop
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h4>MEN</h4>
+              <a href="men.html">New Arrivals</a>
+              <a href="men.html">Clothing</a>
+              <a href="men.html">Shoes</a>
+              <a href="men.html">Accessories</a>
+            </div>
+            <div class="mega-column">
+              <h4>WOMEN</h4>
+              <a href="women.html">New Season</a>
+              <a href="women.html">Clothing</a>
+              <a href="women.html">Shoes</a>
+              <a href="women.html">Accessories</a>
+            </div>
+            <div class="mega-column">
+              <h4>KIDS</h4>
+              <a href="kids.html">Boys</a>
+              <a href="kids.html">Girls</a>
+              <a href="kids.html">Baby</a>
+            </div>
+            <div class="mega-column">
+              <h4>SALE</h4>
+              <a href="sales.html">Up To 70%</a>
+              <a href="sales.html">Last Chance</a>
+              <a href="sales.html">Accessories</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="icons">
+      <i class="fa-solid fa-magnifying-glass" data-search-trigger style="cursor:pointer;"></i>
+      <a href="wishlist.html" class="nav-wishlist-btn" aria-label="Wishlist">
+        <i class="fa-regular fa-heart"></i>
+        <span class="wishlist-badge" id="nav-wishlist-count">0</span>
+      </a>
+      <a href="cart.html" class="nav-cart-btn" aria-label="Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-badge" id="nav-cart-count">0</span>
+      </a>
+      <i class="fa-solid fa-circle-user"></i>
+    </div>
+  </nav>
+
+  <main class="success-page" id="moodk-success-page">
+    <div class="success-container">
+
+      <div class="success-card">
+
+        <div class="success-checkmark-wrap">
+          <i class="fa-solid fa-check"></i>
+        </div>
+
+        <span class="success-badge">ORDER CONFIRMED</span>
+        <h1 class="success-heading">Thank you for your order!</h1>
+        <p class="success-subtext">We have received your order and are currently preparing it with utmost care.</p>
+
+        <div class="success-meta-grid">
+          <div class="success-meta-item">
+            <span class="success-meta-label">Order Number</span>
+            <span class="success-meta-val" id="order-id">MOODK-48291</span>
+          </div>
+          <div class="success-meta-item">
+            <span class="success-meta-label">Order Date</span>
+            <span class="success-meta-val" id="order-date">Aug 14, 2026</span>
+          </div>
+          <div class="success-meta-item">
+            <span class="success-meta-label">Payment Method</span>
+            <span class="success-meta-val" id="order-payment-method">Credit / Debit Card</span>
+          </div>
+          <div class="success-meta-item">
+            <span class="success-meta-label">Estimated Delivery</span>
+            <span class="success-meta-val" id="order-delivery" style="color: #166534;">2–4 Business Days</span>
+          </div>
+        </div>
+
+        <div class="success-info-grid">
+          <div class="success-info-block">
+            <h4>Customer Details</h4>
+            <p><strong id="customer-name">Alex Morgan</strong></p>
+            <p id="customer-email">alex@example.com</p>
+            <p id="customer-phone">010 1234 5678</p>
+          </div>
+          <div class="success-info-block">
+            <h4>Delivery Address</h4>
+            <p id="shipping-address-line">12 El Nil Street, Building 4</p>
+            <p id="shipping-city-line">Zamalek, Cairo</p>
+            <p id="shipping-apartment-line">Apt 4B</p>
+          </div>
+        </div>
+
+        <div class="success-details-section">
+          <h3 class="success-details-title">ITEMS ORDERED</h3>
+          <div class="success-items-list" id="success-items-list">
+            <!-- Dynamically populated from localStorage -->
+          </div>
+
+          <div class="checkout-calc">
+            <div class="checkout-calc__row">
+              <span>Subtotal</span>
+              <strong id="success-subtotal">EGP 0</strong>
+            </div>
+            <div class="checkout-calc__row">
+              <span>Estimated Shipping</span>
+              <strong style="color: #166534;">FREE</strong>
+            </div>
+            <div class="checkout-calc__row total-row">
+              <span>Total Paid</span>
+              <strong id="success-grand-total">EGP 0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="success-actions">
+          <a href="../index.html" class="success-btn-primary">
+            <span>CONTINUE SHOPPING</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+          <button type="button" class="success-btn-secondary" onclick="window.print()">
+            <i class="fa-solid fa-print"></i>
+            <span>PRINT RECEIPT</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="moodk-footer" id="footer">
+    <div class="moodk-footer__top-spacer"></div>
+
+    <div class="moodk-footer__container">
+      <hr class="moodk-footer__divider">
+
+      <div class="moodk-footer__columns">
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">SHOP</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="men.html">Men</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="kids.html">Kids</a></li>
+            <li><a href="sales.html">Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">COLLECTIONS</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="men.html">New Arrivals</a></li>
+            <li><a href="women.html">Best Sellers</a></li>
+            <li><a href="men.html">Essentials</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">CUSTOMER CARE</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="contact.html">Returns & Exchanges</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">COMPANY</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">FOLLOW US</h3>
+          <div class="moodk-footer__socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
+                class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="moodk-footer__middle-spacer"></div>
+
+      <div class="moodk-footer__bottom">
+        <p class="moodk-footer__legal-text">
+          © 2026 MOODK. All rights reserved. <span class="moodk-footer__pipe">|</span>
+          <a href="#">Privacy Policy</a> <span class="moodk-footer__pipe">|</span>
+          <a href="../assets/documents/MOODk-Terms-and-Conditions.pdf" target="_blank">Terms & Conditions</a> <span class="moodk-footer__pipe">|</span>
+          <a href="#">Accessibility</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-panel">
+      <div class="search-panel__header">
+        <i class="fa-solid fa-magnifying-glass search-panel__icon"></i>
+        <input type="text" id="search-panel-input" class="search-panel__input" placeholder="Search products..."
+          autocomplete="off">
+        <button class="search-panel__close" id="search-panel-close" aria-label="Close search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="search-panel__divider"></div>
+      <div class="search-panel__results" id="search-panel-results"></div>
+    </div>
+  </div>
+
+  <script src="../js/wishlist.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/auth.js"></script>
+
+  <!-- SUCCESS PAGE DATA INLINE LOADER -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Ensure navbar cart badge displays 0
+      if (typeof updateCartBadge === 'function') {
+        updateCartBadge();
+      }
+
+      let order = null;
+      try {
+        const raw = localStorage.getItem('moodkLatestOrder');
+        if (raw) {
+          order = JSON.parse(raw);
+        }
+      } catch (e) {
+        console.error('Error reading moodkLatestOrder:', e);
+      }
+
+      // Default fallback demo data if visited without submitting checkout
+      if (!order) {
+        order = {
+          id: 'MOODK-48291',
+          date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }),
+          payment: { method: 'Credit / Debit Card', status: 'Confirmed' },
+          estimatedDelivery: '2–4 Business Days',
+          customer: {
+            name: 'Valued Customer',
+            email: 'customer@example.com',
+            phone: '+20 10 1234 5678'
+          },
+          shippingAddress: {
+            address: '15 El Nile Street',
+            city: 'Zamalek',
+            governorate: 'Cairo',
+            apartment: 'Floor 3, Apt 12'
+          },
+          subtotal: 3499,
+          total: 3499,
+          currency: 'EGP',
+          items: [
+            {
+              name: 'Oversized Wool Blend Trench Coat',
+              price: 3499,
+              quantity: 1,
+              size: 'L',
+              color: '#36383e',
+              colorName: 'Charcoal',
+              image: '../assets/product-1.jpg'
+            }
+          ]
+        };
+      }
+
+      // Render Order Info
+      document.getElementById('order-id').textContent = order.id || 'MOODK-48291';
+      document.getElementById('order-date').textContent = order.date || 'Today';
+      document.getElementById('order-payment-method').textContent = order.payment?.method || 'Credit / Debit Card';
+      document.getElementById('order-delivery').textContent = order.estimatedDelivery || '2–4 Business Days';
+
+      // Customer details
+      document.getElementById('customer-name').textContent = order.customer?.name || 'Customer';
+      document.getElementById('customer-email').textContent = order.customer?.email || '';
+      document.getElementById('customer-phone').textContent = order.customer?.phone || '';
+
+      // Shipping address
+      const addr = order.shippingAddress || {};
+      document.getElementById('shipping-address-line').textContent = addr.address || 'Street Address';
+      document.getElementById('shipping-city-line').textContent = `${addr.city || ''}${addr.governorate ? ', ' + addr.governorate : ''}`;
+      const aptEl = document.getElementById('shipping-apartment-line');
+      if (addr.apartment) {
+        aptEl.textContent = addr.apartment;
+        aptEl.style.display = 'block';
+      } else {
+        aptEl.style.display = 'none';
+      }
+
+      // Items list
+      const itemsListEl = document.getElementById('success-items-list');
+      const currency = order.currency || 'EGP';
+      if (itemsListEl && Array.isArray(order.items) && order.items.length > 0) {
+        const isInsidePages = window.location.pathname.toLowerCase().includes('/pages/');
+
+        itemsListEl.innerHTML = order.items.map(item => {
+          const qty = parseInt(item.quantity, 10) || 1;
+          const itemTotal = (item.price || 0) * qty;
+
+          let imgSrc = item.image || '';
+          if (isInsidePages && imgSrc.startsWith('assets/')) {
+            imgSrc = '../' + imgSrc;
+          } else if (!isInsidePages && imgSrc.startsWith('../assets/')) {
+            imgSrc = imgSrc.replace('../assets/', 'assets/');
+          }
+
+          const colorDotHtml = item.color
+            ? `<span class="checkout-item__color-dot" style="background-color: ${item.color};"></span>`
+            : '';
+
+          return `
+            <div class="success-item-row">
+              <div class="success-item-img-wrap">
+                <img src="${imgSrc}" alt="${item.name}" class="success-item-img">
+              </div>
+              <div class="success-item-info">
+                <h4>${item.name}</h4>
+                <div class="success-item-meta">
+                  ${item.size ? `<span>Size: <strong>${item.size}</strong></span>` : ''}
+                  ${item.color ? `<span>${colorDotHtml} <strong>${item.colorName || item.color}</strong></span>` : ''}
+                  <span>Qty: <strong>${qty}</strong></span>
+                </div>
+              </div>
+              <div class="success-item-total">${currency} ${itemTotal.toLocaleString()}</div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Calculations
+      document.getElementById('success-subtotal').textContent = `${currency} ${(order.subtotal || order.total || 0).toLocaleString()}`;
+      document.getElementById('success-grand-total').textContent = `${currency} ${(order.total || 0).toLocaleString()}`;
+    });
+  </script>
+</body>
+
+</html>

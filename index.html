@@ -4,7 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <title>MOODK</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,197 +22,402 @@
       <a href="index.html" class="logo">MOODK</a>
 
       <ul class="nav-links" id="nav-menu">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="pages/men.html" class="nav-link">Men</a></li>
-        <li><a href="pages/women.html" class="nav-link">Women</a></li>
-        <li><a href="pages/kids.html" class="nav-link">Kids</a></li>
-        <li><a href="#sales" class="nav-link sales">Sales</a></li>
+
+    <li class="mega-parent">
+
+        <a href="#" class="nav-link">
+            Shop
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+
+        <div class="mega-menu">
+
+            <div class="mega-column">
+                <h4>MEN</h4>
+
+                <a href="pages/men.html">New Arrivals</a>
+                <a href="pages/men.html">Clothing</a>
+                <a href="pages/men.html">Shoes</a>
+                <a href="pages/men.html">Accessories</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>WOMEN</h4>
+
+                <a href="pages/women.html">New Season</a>
+                <a href="pages/women.html">Clothing</a>
+                <a href="pages/women.html">Shoes</a>
+                <a href="pages/women.html">Accessories</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>KIDS</h4>
+
+                <a href="pages/kids.html">Boys</a>
+                <a href="pages/kids.html">Girls</a>
+                <a href="pages/kids.html">Baby</a>
+            </div>
+
+            <div class="mega-column">
+                <h4>SALE</h4>
+
+                <a href="pages/sales.html">Up To 70%</a>
+                <a href="pages/sales.html">Last Chance</a>
+                <a href="pages/sales.html">Accessories</a>
+            </div>
+
+        </div>
+
+    </li>
+
       </ul>
     </div>
 
     <div class="icons">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <i class="fa-solid fa-cart-shopping"></i>
-      <i class="fa-solid fa-circle-user"></i>
-    </div>
 
-    <button class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
-    </button>
+      <i class="fa-solid fa-magnifying-glass" data-search-trigger style="cursor:pointer;"></i>
+
+      <a href="pages/wishlist.html" class="nav-wishlist-btn" aria-label="Wishlist">
+        <i class="fa-regular fa-heart"></i>
+        <span class="wishlist-badge" id="nav-wishlist-count">0</span>
+      </a>
+
+      <a href="pages/cart.html" class="nav-cart-btn" aria-label="Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-badge" id="nav-cart-count">0</span>
+      </a>
+
+      <i class="fa-solid fa-circle-user"></i>
+
+    </div>
   </nav>
 
-  <div class="confidence">
-    <div class="photo confidence-photo"></div>
-    <div class="time">SPRING / SUMMER 2026</div>
-    <div class="title">The Quiet Confidence</div>
-    <div class="description">Explore our curated selection of essentials designed
-      for the modern atelier. Minimalist forms meet
-      exceptional craftsmanship.</div>
-    <div class="buttons">
-      <button class="shop-now">Shop New Arrivals</button>
-      <button class="lookbook">The Lookbook</button>
-    </div>
-  </div>
-
-  <div class="category-grid">
-
-    <div class="item big">
-      <img src="photos/men.png" alt="Menswear">
-      <div class="dark"></div>
-      <div class="info">
-        <h3>Menswear</h3>
-        <a href="#">Explore More</a>
-      </div>
-    </div>
-
-    <div class="item small">
-      <img src="photos/women.png" alt="Womenswear">
-      <div class="dark"></div>
-      <div class="info">
-        <h3>Womenswear</h3>
-        <a href="#">Explore More</a>
-      </div>
-    </div>
-
-    <div class="item small">
-      <img src="photos/kids.png" alt="Kidsswear">
-      <div class="dark"></div>
-      <div class="info">
-        <h3>Kidsswear</h3>
-        <a href="#">Explore More</a>
-      </div>
-    </div>
-  </div>
-
-  <section class="sales-section" id="sales">
-    <div class="section-top">
-      <h2 class="head-sales">Sales</h2>
-      <a href="pages/sales.html">View All Products</a>
-    </div>
-
-    <div class="products">
-      <div class="product">
-        <div class="product-img">
-          <div class="coat-img"></div>
+  <section class="hero-section">
+    <div class="hero-section__container">
+      
+      <div class="hero-section__content">
+        <span class="hero-section__eyebrow">SPRING / SUMMER 2026</span>
+        
+        <h1 class="hero-section__headline">
+          EVERYDAY PIECES<br>
+          MADE TO MOVE.
+        </h1>
+        
+        <p class="hero-section__subtext">
+          Discover contemporary essentials for men, women and kids, selected from the brands you already love.
+        </p>
+        
+        <div class="hero-section__cta-group">
+          <a href="pages/sales.html" class="hero-section__btn hero-section__btn--primary">
+            <span>SHOP COLLECTION</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+          <a href="#moodk-edit" class="hero-section__btn hero-section__btn--secondary">
+            <span>EXPLORE CATEGORIES</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
-        <h4>Coat</h4>
-        <p class="sub">Oatmeal Melange</p>
-        <p class="price">$285</p>
       </div>
 
-      <div class="product">
-        <div class="product-img">
-          <div class="dress-img"></div>
+      <div class="hero-section__visual">
+        <div class="hero-section__img-frame">
+          <img src="assets/images/unnamed.png" alt="MOODk Spring / Summer 2026 Multi-Brand Collection" class="hero-section__img">
         </div>
-        <h4>Dress</h4>
-        <p class="sub">Ivory</p>
-        <p class="price">$195</p>
       </div>
 
-      <div class="product">
-        <div class="product-img">
-          <div class="boot-img"></div>
-        </div>
-        <h4>Boot</h4>
-        <p class="sub">Dark Cocoa</p>
-        <p class="price"><del>$340</del> $285</p>
+    </div>
+  </section>
+
+  <section class="moodk-edit" id="moodk-edit">
+    <div class="moodk-edit__container">
+      
+      <div class="moodk-edit__header">
+        <h2 class="moodk-edit__heading">A SELECTION FOR EVERY MOOD.</h2>
       </div>
 
-      <div class="product">
-        <div class="product-img">
-          <div class="tee-img"></div>
+      <div class="moodk-edit__grid">
+        
+        <a href="pages/men.html" class="moodk-edit__card">
+          <div class="moodk-edit__img-wrap">
+            <img src="assets/images/men.png" alt="Men's Collection" loading="lazy" class="moodk-edit__img">
+          </div>
+          <div class="moodk-edit__overlay"></div>
+          <div class="moodk-edit__content">
+            <h3 class="moodk-edit__title">MEN</h3>
+            <span class="moodk-edit__cta">
+              <span>SHOP MEN</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </span>
+          </div>
+        </a>
+
+        <a href="pages/women.html" class="moodk-edit__card">
+          <div class="moodk-edit__img-wrap">
+            <img src="assets/images/women.png" alt="Women's Collection" loading="lazy" class="moodk-edit__img">
+          </div>
+          <div class="moodk-edit__overlay"></div>
+          <div class="moodk-edit__content">
+            <h3 class="moodk-edit__title">WOMEN</h3>
+            <span class="moodk-edit__cta">
+              <span>SHOP WOMEN</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </span>
+          </div>
+        </a>
+
+        <a href="pages/kids.html" class="moodk-edit__card">
+          <div class="moodk-edit__img-wrap">
+            <img src="assets/images/kids.png" alt="Kids' Collection" loading="lazy" class="moodk-edit__img">
+          </div>
+          <div class="moodk-edit__overlay"></div>
+          <div class="moodk-edit__content">
+            <h3 class="moodk-edit__title">KIDS</h3>
+            <span class="moodk-edit__cta">
+              <span>SHOP KIDS</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </span>
+          </div>
+        </a>
+
+        <a href="pages/sales.html" class="moodk-edit__card moodk-edit__card--sale">
+          <div class="moodk-edit__img-wrap">
+            <img src="assets/images/sale.png" alt="Sale Collection" loading="lazy" class="moodk-edit__img">
+          </div>
+          <div class="moodk-edit__overlay"></div>
+          <div class="moodk-edit__content">
+            <h3 class="moodk-edit__title">SALE</h3>
+            <span class="moodk-edit__cta">
+              <span>SHOP SALE</span>
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </span>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="explore" id="explore">
+    <div class="explore__header">
+      <h2 class="explore__title">Explore Our Products</h2>
+      <p class="explore__subtitle">Curated pieces for every moment</p>
+      <div class="explore__filters">
+        <button class="explore__filter active" data-filter="all">All</button>
+        <button class="explore__filter" data-filter="men">Men Fashion</button>
+        <button class="explore__filter" data-filter="women">Women Fashion</button>
+        <button class="explore__filter" data-filter="kids">Kids</button>
+        <button class="explore__filter" data-filter="sale">Sale</button>
+      </div>
+    </div>
+    <div class="explore__carousel">
+      <button class="explore__arrow explore__arrow--prev" aria-label="Previous">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="explore__viewport">
+        <div class="explore__track" id="explore-track"></div>
+      </div>
+      <button class="explore__arrow explore__arrow--next" aria-label="Next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+
+  <section class="brands-section" id="brands">
+    <div class="brands-header">
+      <span class="brands-header__subtitle">TRUSTED BRANDS</span>
+      <h2 class="brands-header__title">Shop Your Favorite Brands</h2>
+      <p class="brands-header__desc">We bring you the best from the world's leading fashion and lifestyle brands.</p>
+      <p class="brands-header__tagline">Authentic. Premium. Always.</p>
+    </div>
+
+    <div class="brands-container">
+      <div class="brands-grid">
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/zara.svg" alt="ZARA" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">ZARA</span>
         </div>
-        <h4>T-Shirt Black</h4>
-        <p class="sub">Bone White</p>
-        <p class="price">$65</p>
+
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/nike.svg" alt="NIKE" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">NIKE</span>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/adidas.svg" alt="ADIDAS" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">ADIDAS</span>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/hm.svg" alt="H&amp;M" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">H&amp;M</span>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/puma.svg" alt="PUMA" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">PUMA</span>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/mango.svg" alt="MANGO" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">MANGO</span>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/bershka.svg" alt="BERSHKA" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">BERSHKA</span>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/jack-jones.svg" alt="JACK &amp; JONES" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">JACK &amp; JONES</span>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/asos.svg" alt="ASOS" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">ASOS</span>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/calvin-klein.svg" alt="CALVIN KLEIN" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">CALVIN KLEIN</span>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/tommy-hilfiger.svg" alt="TOMMY HILFIGER" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">TOMMY HILFIGER</span>
+        </div>
+
+        <div class="brand-card">
+          <div class="brand-card__logo">
+            <img src="assets/brands/the-north-face.svg" alt="THE NORTH FACE" class="brand-logo" loading="lazy">
+          </div>
+          <span class="brand-card__name">THE NORTH FACE</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="suit">
-    <div class="suit-photo"></div>
-    <div class="suit-info">
-      <div class="title">The Craftsmanship</div>
-      <div class="header">Tailored to Your
-        Timeline</div>
-      <div class="description">Every piece in our Atelier collection is hand-finished.
-        We believe in slow fashion that lasts decades, not
-        seasons. Our materials are sourced from sustainable
-        mills in Northern Italy.</div>
-      <div class="features">
-        <div class="feature">
-          <div class="icon"><i class="fa-solid fa-seedling"></i></div>
-          <div class="content">
-            <div class="text">Sustainable Materials</div>
-            <div class="small">100% trace-back capability for our premium wool.</div>
+  <footer class="moodk-footer" id="footer">
+    <div class="moodk-footer__top-spacer"></div>
+
+    <div class="moodk-footer__container">
+      <hr class="moodk-footer__divider">
+
+      <div class="moodk-footer__columns">
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">SHOP</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="pages/men.html">Men</a></li>
+            <li><a href="pages/women.html">Women</a></li>
+            <li><a href="pages/kids.html">Kids</a></li>
+            <li><a href="pages/sales.html">Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">COLLECTIONS</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="pages/men.html">New Arrivals</a></li>
+            <li><a href="pages/women.html">Best Sellers</a></li>
+            <li><a href="pages/men.html">Essentials</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">CUSTOMER CARE</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="pages/contact.html">Help Center</a></li>
+            <li><a href="pages/contact.html">Returns & Exchanges</a></li>
+            <li><a href="pages/contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">COMPANY</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="pages/about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">FOLLOW US</h3>
+          <div class="moodk-footer__socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
           </div>
         </div>
-        <div class="feature">
-          <div class="icon"><i class="fa-solid fa-handshake-angle"></i></div>
-          <div class="content">
-            <div class="text">Lifetime Guarantee</div>
-            <div class="small">Free repairs on all structural seams for life.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="logo">MOODK</span>
-        <div class="socials-icons">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-solid fa-phone"></i></a>
-        </div>
       </div>
 
-      <div class="footer-column">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Best Sellers</a></li>
-          <li><a href="#">Editorial</a></li>
-          <li><a href="#sales">Sale</a></li>
-        </ul>
-      </div>
+      <div class="moodk-footer__middle-spacer"></div>
 
-      <div class="footer-column">
-        <h4>Assistance</h4>
-        <ul>
-          <li><a href="#">Shipping & Returns</a></li>
-          <li><a href="#">Track Order</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>Category</h4>
-        <ul>
-          <li><a href="pages/men.html">Men</a></li>
-          <li><a href="pages/women.html">Women</a></li>
-          <li><a href="pages/kids.html">kids</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 MOODK . All rights reserved.</p>
-      <div class="legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Cookies</a>
+      <div class="moodk-footer__bottom">
+        <p class="moodk-footer__legal-text">
+          © 2026 MOODK. All rights reserved. <span class="moodk-footer__pipe">|</span>
+          <a href="#">Privacy Policy</a> <span class="moodk-footer__pipe">|</span>
+          <a href="#">Terms & Conditions</a> <span class="moodk-footer__pipe">|</span>
+          <a href="#">Accessibility</a>
+        </p>
       </div>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <!-- Search overlay -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-panel">
+
+      <div class="search-panel__header">
+        <i class="fa-solid fa-magnifying-glass search-panel__icon"></i>
+        <input
+          type="text"
+          id="search-panel-input"
+          class="search-panel__input"
+          placeholder="Search products..."
+          autocomplete="off"
+        >
+        <button class="search-panel__close" id="search-panel-close" aria-label="Close search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="search-panel__divider"></div>
+
+      <div class="search-panel__results" id="search-panel-results"></div>
+
+    </div>
+  </div>
+
+  <script src="js/wishlist.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/auth.js"></script>
 </body>
 
 </html>

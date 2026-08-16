@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOODK</title>
+  <meta name="description"
+    content="Contact MOODK customer care for inquiries, orders, styling consultations, and flagship store locations in Cairo, Egypt.">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav_left">
+      <a href="../index.html" class="logo">MOODK</a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li class="mega-parent">
+          <a href="#" class="nav-link">
+            Shop
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h4>MEN</h4>
+              <a href="men.html">New Arrivals</a>
+              <a href="men.html">Clothing</a>
+              <a href="men.html">Shoes</a>
+              <a href="men.html">Accessories</a>
+            </div>
+            <div class="mega-column">
+              <h4>WOMEN</h4>
+              <a href="women.html">New Season</a>
+              <a href="women.html">Clothing</a>
+              <a href="women.html">Shoes</a>
+              <a href="women.html">Accessories</a>
+            </div>
+            <div class="mega-column">
+              <h4>KIDS</h4>
+              <a href="kids.html">Boys</a>
+              <a href="kids.html">Girls</a>
+              <a href="kids.html">Baby</a>
+            </div>
+            <div class="mega-column">
+              <h4>SALE</h4>
+              <a href="sales.html">Up To 70%</a>
+              <a href="sales.html">Last Chance</a>
+              <a href="sales.html">Accessories</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="icons">
+      <i class="fa-solid fa-magnifying-glass" data-search-trigger style="cursor:pointer;"></i>
+      <a href="wishlist.html" class="nav-wishlist-btn" aria-label="Wishlist">
+        <i class="fa-regular fa-heart"></i>
+        <span class="wishlist-badge" id="nav-wishlist-count">0</span>
+      </a>
+      <a href="cart.html" class="nav-cart-btn" aria-label="Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-badge" id="nav-cart-count">0</span>
+      </a>
+      <i class="fa-solid fa-circle-user"></i>
+    </div>
+  </nav>
+
+  <main class="contact-page">
+
+    <section class="contact-info-section" id="contact-info">
+      <div class="contact-container">
+        <div class="contact-cards-grid">
+
+          <div class="contact-card">
+            <div class="contact-card__icon-wrap">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <h3 class="contact-card__title">Email</h3>
+            <a href="mailto:support@moodk.com" class="contact-card__value">support@moodk.com</a>
+            <p class="contact-card__note">Fast response within 24 hours</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon-wrap">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <h3 class="contact-card__title">Phone</h3>
+            <a href="tel:+20XXXXXXXXXX" class="contact-card__value">+20 107 018 2665</a>
+            <p class="contact-card__note">Customer care &amp; order assistance</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon-wrap">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <h3 class="contact-card__title">Working Hours</h3>
+            <div class="contact-card__hours">
+              <span class="contact-card__hours-days">Saturday – Thursday</span>
+              <span class="contact-card__hours-time">10:00 AM – 10:00 PM</span>
+            </div>
+            <p class="contact-card__note">Friday: Closed</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form-section" id="contact-form-section">
+      <div class="contact-container">
+        <div class="contact-form-wrapper">
+
+          <div class="contact-section-header">
+            <span class="contact-section-badge">Get In Touch</span>
+            <h2 class="contact-section-heading">Send Us a Message</h2>
+          </div>
+
+          <div class="contact-alert contact-alert--error" id="contact-form-alert" role="alert">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span id="contact-form-alert-text">Please correct the highlighted errors before submitting.</span>
+          </div>
+
+          <form id="moodk-contact-form" class="contact-form" novalidate>
+            <div class="contact-form__row">
+              <!-- Full Name -->
+              <div class="contact-form__group" id="group-name">
+                <label for="contact-name" class="contact-form__label">
+                  <span>Full Name <span class="contact-form__required-mark">*</span></span>
+                </label>
+                <input type="text" id="contact-name" name="fullName" class="contact-form__input"
+                  placeholder="e.g. John Doe" required autocomplete="name">
+                <span class="contact-form__error-msg" id="error-name">Please enter your full name.</span>
+              </div>
+
+              <!-- Email Address -->
+              <div class="contact-form__group" id="group-email">
+                <label for="contact-email" class="contact-form__label">
+                  <span>Email Address <span class="contact-form__required-mark">*</span></span>
+                </label>
+                <input type="email" id="contact-email" name="email" class="contact-form__input"
+                  placeholder="e.g. name@example.com" required autocomplete="email">
+                <span class="contact-form__error-msg" id="error-email">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <div class="contact-form__row">
+              <div class="contact-form__group" id="group-subject">
+                <label for="contact-subject" class="contact-form__label">
+                  <span>Subject <span class="contact-form__required-mark">*</span></span>
+                </label>
+                <input type="text" id="contact-subject" name="subject" class="contact-form__input"
+                  placeholder="e.g. Order Status, Product Inquiry, Returns" required>
+                <span class="contact-form__error-msg" id="error-subject">Please provide a subject.</span>
+              </div>
+
+              <div class="contact-form__group" id="group-order">
+                <label for="contact-order" class="contact-form__label">
+                  <span>Order Number</span>
+                  <span class="contact-form__optional-tag">(Optional)</span>
+                </label>
+                <input type="text" id="contact-order" name="orderNumber" class="contact-form__input"
+                  placeholder="e.g. #ORD-2026-8821">
+              </div>
+            </div>
+
+            <div class="contact-form__group" id="group-message">
+              <label for="contact-message" class="contact-form__label">
+                <span>Message <span class="contact-form__required-mark">*</span></span>
+              </label>
+              <textarea id="contact-message" name="message" class="contact-form__textarea"
+                placeholder="How can we assist you today?" rows="5" required></textarea>
+              <span class="contact-form__error-msg" id="error-message">Please enter your message (at least 10
+                characters).</span>
+            </div>
+
+            <div class="contact-form__submit-wrap">
+              <button type="submit" class="contact-form__btn" id="contact-submit-btn">
+                <span class="contact-form__btn-text">Send Message</span>
+                <i class="fa-solid fa-arrow-right contact-form__btn-icon"></i>
+                <span class="contact-form__btn-spinner"></span>
+              </button>
+            </div>
+          </form>
+
+          <div class="contact-success-card" id="contact-success-card" role="status" aria-live="polite">
+            <div class="contact-success-card__icon">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="contact-success-card__title">Message Sent Successfully</h3>
+            <p class="contact-success-card__desc" id="contact-success-desc">
+              Thank you for contacting MOODK. Our support team has received your message and will get back to you
+              shortly.
+            </p>
+            <button type="button" class="contact-success-card__btn" id="contact-reset-btn">
+              <i class="fa-solid fa-rotate-left"></i>
+              <span>Send Another Message</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-store-section" id="find-our-store">
+      <div class="contact-container">
+        <div class="contact-map-wrapper">
+
+          <div class="contact-section-header" style="margin-bottom: 24px;">
+            <span class="contact-section-badge">Boutique Location</span>
+            <h2 class="contact-section-heading">Find Our Store</h2>
+            <p class="contact-section-subtext">
+              Experience the MOODK collection in person. Visit our flagship store in Cairo, Egypt.
+            </p>
+          </div>
+
+          <!-- Google Maps iframe -->
+          <div class="contact-map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.611850409!2d31.258464350000003!3d30.0594838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2sCairo%2C%20Cairo%20Governorate%2C%20Egypt!5e0!3m2!1sen!2seg!4v1710000000000!5m2!1sen!2seg"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="MOODK Flagship Store - Cairo, Egypt"></iframe>
+          </div>
+
+          <div class="contact-store-details">
+            <div class="contact-store-details__item">
+              <div class="contact-store-details__icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <p class="contact-store-details__text-title">Location</p>
+                <p class="contact-store-details__text-val">Cairo, Egypt</p>
+              </div>
+            </div>
+
+            <div class="contact-store-details__item">
+              <div class="contact-store-details__icon">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div>
+                <p class="contact-store-details__text-title">Opening Hours</p>
+                <p class="contact-store-details__text-val">Sat – Thu: 10:00 AM – 10:00 PM</p>
+              </div>
+            </div>
+
+            <div class="contact-store-details__item">
+              <div class="contact-store-details__icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <p class="contact-store-details__text-title">Direct Store Line</p>
+                <p class="contact-store-details__text-val">+20 107 018 2665</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="moodk-footer" id="footer">
+    <div class="moodk-footer__top-spacer"></div>
+
+    <div class="moodk-footer__container">
+      <hr class="moodk-footer__divider">
+
+      <div class="moodk-footer__columns">
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">SHOP</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="men.html">Men</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="kids.html">Kids</a></li>
+            <li><a href="sales.html">Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">COLLECTIONS</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="men.html">New Arrivals</a></li>
+            <li><a href="women.html">Best Sellers</a></li>
+            <li><a href="men.html">Essentials</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">CUSTOMER CARE</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="contact.html">Returns &amp; Exchanges</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">COMPANY</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">FOLLOW US</h3>
+          <div class="moodk-footer__socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
+                class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="moodk-footer__middle-spacer"></div>
+
+      <div class="moodk-footer__bottom">
+        <p class="moodk-footer__legal-text">
+          © 2026 MOODK. All rights reserved. <span class="moodk-footer__pipe">|</span>
+          <a href="#">Privacy Policy</a> <span class="moodk-footer__pipe">|</span>
+          <a href="../assets/documents/MOODk-Terms-and-Conditions.pdf" target="_blank">Terms & Conditions</a> <span class="moodk-footer__pipe">|</span>
+          <a href="#">Accessibility</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-panel">
+      <div class="search-panel__header">
+        <i class="fa-solid fa-magnifying-glass search-panel__icon"></i>
+        <input type="text" id="search-panel-input" class="search-panel__input" placeholder="Search products..."
+          autocomplete="off">
+        <button class="search-panel__close" id="search-panel-close" aria-label="Close search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="search-panel__divider"></div>
+      <div class="search-panel__results" id="search-panel-results"></div>
+    </div>
+  </div>
+
+  <!-- Global Project Scripts -->
+  <script src="../js/wishlist.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/auth.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('moodk-contact-form');
+      const submitBtn = document.getElementById('contact-submit-btn');
+      const successCard = document.getElementById('contact-success-card');
+      const resetBtn = document.getElementById('contact-reset-btn');
+      const alertBanner = document.getElementById('contact-form-alert');
+      const successDesc = document.getElementById('contact-success-desc');
+
+      if (!contactForm) return;
+
+      const fields = {
+        name: {
+          input: document.getElementById('contact-name'),
+          group: document.getElementById('group-name'),
+          errorEl: document.getElementById('error-name'),
+          validate: (val) => val.trim().length >= 2,
+          errorMessage: 'Please enter your full name (at least 2 characters).'
+        },
+        email: {
+          input: document.getElementById('contact-email'),
+          group: document.getElementById('group-email'),
+          errorEl: document.getElementById('error-email'),
+          validate: (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim()),
+          errorMessage: 'Please enter a valid email address.'
+        },
+        subject: {
+          input: document.getElementById('contact-subject'),
+          group: document.getElementById('group-subject'),
+          errorEl: document.getElementById('error-subject'),
+          validate: (val) => val.trim().length >= 2,
+          errorMessage: 'Please specify a subject for your inquiry.'
+        },
+        message: {
+          input: document.getElementById('contact-message'),
+          group: document.getElementById('group-message'),
+          errorEl: document.getElementById('error-message'),
+          validate: (val) => val.trim().length >= 10,
+          errorMessage: 'Please enter a detailed message (at least 10 characters).'
+        }
+      };
+
+      // Live validation on blur and input
+      Object.keys(fields).forEach((key) => {
+        const field = fields[key];
+        if (!field.input) return;
+
+        field.input.addEventListener('input', () => {
+          if (field.group.classList.contains('has-error')) {
+            validateField(key);
+          }
+        });
+
+        field.input.addEventListener('blur', () => {
+          if (field.input.value.trim().length > 0) {
+            validateField(key);
+          }
+        });
+      });
+
+      function validateField(key) {
+        const field = fields[key];
+        const val = field.input.value;
+        const isValid = field.validate(val);
+
+        if (!isValid) {
+          field.group.classList.add('has-error');
+          field.input.classList.add('is-invalid');
+          if (field.errorEl) field.errorEl.textContent = field.errorMessage;
+          return false;
+        } else {
+          field.group.classList.remove('has-error');
+          field.input.classList.remove('is-invalid');
+          return true;
+        }
+      }
+
+      function validateAll() {
+        let isFormValid = true;
+        let firstInvalidField = null;
+
+        Object.keys(fields).forEach((key) => {
+          const isValid = validateField(key);
+          if (!isValid) {
+            isFormValid = false;
+            if (!firstInvalidField) firstInvalidField = fields[key].input;
+          }
+        });
+
+        if (!isFormValid) {
+          if (alertBanner) alertBanner.classList.add('is-visible');
+          if (firstInvalidField) firstInvalidField.focus();
+        } else {
+          if (alertBanner) alertBanner.classList.remove('is-visible');
+        }
+
+        return isFormValid;
+      }
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (!validateAll()) {
+          return;
+        }
+
+        // Simulate async luxury submission
+        submitBtn.classList.add('is-loading');
+        submitBtn.disabled = true;
+
+        const emailVal = fields.email.input.value.trim();
+        const nameVal = fields.name.input.value.trim();
+
+        setTimeout(() => {
+          submitBtn.classList.remove('is-loading');
+          submitBtn.disabled = false;
+
+          // Display success state
+          contactForm.style.display = 'none';
+          if (alertBanner) alertBanner.classList.remove('is-visible');
+          if (successDesc) {
+            successDesc.textContent = `Thank you, ${nameVal}! We have received your message and will respond to ${emailVal} within 24 business hours.`;
+          }
+          successCard.classList.add('is-visible');
+        }, 600);
+      });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          contactForm.reset();
+          Object.keys(fields).forEach((key) => {
+            fields[key].group.classList.remove('has-error');
+            fields[key].input.classList.remove('is-invalid');
+          });
+          if (alertBanner) alertBanner.classList.remove('is-visible');
+          successCard.classList.remove('is-visible');
+          contactForm.style.display = 'flex';
+          fields.name.input.focus();
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>

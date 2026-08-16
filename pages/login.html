@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="auth-page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOODK</title>
+
+  <link rel="stylesheet" href="../css/auth.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body class="auth-page">
+
+  <main class="auth-wrapper-centered">
+
+    <div class="auth-card">
+
+      <div class="auth-card__header">
+        <a href="../index.html" class="auth-card__logo">MOODK</a>
+        <h1 class="auth-card__title">WELCOME BACK</h1>
+        <p class="auth-card__subtitle">Sign in to your MOODk account.</p>
+      </div>
+
+      <div class="auth-alert" id="login-alert"></div>
+
+      <form id="moodk-login-form" novalidate>
+
+        <div class="auth-group">
+          <label for="login-email" class="auth-label">Email</label>
+          <input type="email" id="login-email" class="auth-input" placeholder="name@example.com" autocomplete="email"
+            required>
+          <div class="auth-field-error" id="login-email-error"></div>
+        </div>
+
+        <div class="auth-group">
+          <label for="login-password" class="auth-label">Password</label>
+          <div class="auth-input-wrap">
+            <input type="password" id="login-password" class="auth-input" placeholder="••••••••"
+              autocomplete="current-password" required>
+            <button type="button" class="auth-eye-toggle" data-target="login-password"
+              aria-label="Toggle password visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+          <div class="auth-field-error" id="login-password-error"></div>
+        </div>
+
+        <button type="submit" class="auth-btn">
+          <span>LOG IN</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+
+      </form>
+
+      <div class="auth-card__footer">
+        <span>Don't have an account?</span>
+        <a href="register.html">Create one</a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="../js/products.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+
+</html>

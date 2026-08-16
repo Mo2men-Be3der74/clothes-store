@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOODK</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/invoice.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Manrope:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav_left">
+      <a href="../index.html" class="logo">MOODK</a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li class="mega-parent">
+          <a href="#" class="nav-link">
+            Shop
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <div class="mega-menu">
+            <div class="mega-column">
+              <h4>MEN</h4>
+              <a href="men.html">New Arrivals</a>
+              <a href="men.html">Clothing</a>
+              <a href="men.html">Shoes</a>
+              <a href="men.html">Accessories</a>
+            </div>
+            <div class="mega-column">
+              <h4>WOMEN</h4>
+              <a href="women.html">New Season</a>
+              <a href="women.html">Clothing</a>
+              <a href="women.html">Shoes</a>
+              <a href="women.html">Accessories</a>
+            </div>
+            <div class="mega-column">
+              <h4>KIDS</h4>
+              <a href="kids.html">Boys</a>
+              <a href="kids.html">Girls</a>
+              <a href="kids.html">Baby</a>
+            </div>
+            <div class="mega-column">
+              <h4>SALE</h4>
+              <a href="sales.html">Up To 70%</a>
+              <a href="sales.html">Last Chance</a>
+              <a href="sales.html">Accessories</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="icons">
+      <i class="fa-solid fa-magnifying-glass" data-search-trigger style="cursor:pointer;"></i>
+      <a href="wishlist.html" class="nav-wishlist-btn" aria-label="Wishlist">
+        <i class="fa-regular fa-heart"></i>
+        <span class="wishlist-badge" id="nav-wishlist-count">0</span>
+      </a>
+      <a href="cart.html" class="nav-cart-btn" aria-label="Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-badge" id="nav-cart-count">0</span>
+      </a>
+      <i class="fa-solid fa-circle-user"></i>
+    </div>
+  </nav>
+
+  <main class="receipt-page" id="moodk-receipt-page">
+    <div class="receipt-page-container">
+
+      <article class="thermal-receipt" id="thermal-receipt-printable">
+
+        <div class="receipt-header">
+          <div class="receipt-brand-name">MOODK</div>
+          <div class="receipt-brand-sub">MODERN FASHION. SIMPLE. TIMELESS.</div>
+          <div class="receipt-brand-info">
+            <div>Cairo, Egypt</div>
+            <div>support@moodk.com</div>
+          </div>
+        </div>
+
+        <div class="receipt-divider double"></div>
+
+        <div class="receipt-order-meta">
+          <div class="receipt-title">ORDER RECEIPT</div>
+          <div class="receipt-meta-row">
+            <span>Order #</span>
+            <strong id="receipt-order-id">MOODK-35965</strong>
+          </div>
+          <div class="receipt-meta-row">
+            <span>Date:</span>
+            <span id="receipt-order-date">August 14, 2026</span>
+          </div>
+          <div class="receipt-status-pill" id="receipt-status-pill">PAID</div>
+        </div>
+
+        <div class="receipt-divider"></div>
+
+        <div class="receipt-section">
+          <div class="receipt-section-label">CUSTOMER</div>
+          <div class="receipt-text-bold" id="receipt-customer-name">Marwan Shamekh</div>
+          <div class="receipt-text" id="receipt-customer-email">marwan@gmail.com</div>
+          <div class="receipt-text" id="receipt-customer-phone">0107018266</div>
+        </div>
+
+        <div class="receipt-section" style="margin-top: 10px;">
+          <div class="receipt-section-label">SHIPPING</div>
+          <div class="receipt-text" id="receipt-shipping-address">5th Settlement, Street 90</div>
+          <div class="receipt-text" id="receipt-shipping-city">Cairo, Egypt</div>
+        </div>
+
+        <div class="receipt-divider"></div>
+
+        <div class="receipt-items-header">
+          <span>ITEM</span>
+          <span>QTY</span>
+        </div>
+
+        <div class="receipt-divider dotted"></div>
+
+        <div class="receipt-items-list" id="receipt-items-list">
+          <!-- Dynamically populated from localStorage -->
+        </div>
+
+        <div class="receipt-divider"></div>
+
+        <div class="receipt-calc">
+          <div class="receipt-calc-row">
+            <span>Subtotal</span>
+            <span id="receipt-subtotal">EGP 1,299</span>
+          </div>
+          <div class="receipt-calc-row">
+            <span>Shipping</span>
+            <span>FREE</span>
+          </div>
+
+          <div class="receipt-divider double" style="margin: 6px 0;"></div>
+
+          <div class="receipt-calc-row total-row">
+            <span>TOTAL</span>
+            <span id="receipt-grand-total">EGP 1,299</span>
+          </div>
+        </div>
+
+        <div class="receipt-divider"></div>
+
+        <div class="receipt-section">
+          <div class="receipt-section-label">PAYMENT</div>
+          <div class="receipt-text-bold" id="receipt-payment-method">Visa •••• 4242</div>
+          <div class="receipt-text" id="receipt-payment-status">Paid</div>
+        </div>
+
+        <div class="receipt-divider double"></div>
+
+        <div class="receipt-footer">
+          <div class="receipt-footer-thankyou">Thank you for shopping with MOODK!</div>
+          <div class="receipt-footer-brand">MOODK</div>
+          <div class="receipt-footer-tagline">MODERN FASHION. SIMPLE. TIMELESS.</div>
+          <div class="receipt-footer-bye">Have a nice day!</div>
+        </div>
+
+      </article>
+
+      <div class="receipt-actions">
+        <button type="button" class="receipt-btn-print" onclick="window.print()">
+          <i class="fa-solid fa-print"></i>
+          <span>PRINT RECEIPT</span>
+        </button>
+        <a href="../index.html" class="receipt-btn-continue">
+          <span>CONTINUE SHOPPING</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="moodk-footer" id="footer">
+    <div class="moodk-footer__top-spacer"></div>
+
+    <div class="moodk-footer__container">
+      <hr class="moodk-footer__divider">
+
+      <div class="moodk-footer__columns">
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">SHOP</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="men.html">Men</a></li>
+            <li><a href="women.html">Women</a></li>
+            <li><a href="kids.html">Kids</a></li>
+            <li><a href="sales.html">Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">COLLECTIONS</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="men.html">New Arrivals</a></li>
+            <li><a href="women.html">Best Sellers</a></li>
+            <li><a href="men.html">Essentials</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">CUSTOMER CARE</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="contact.html">Help Center</a></li>
+            <li><a href="contact.html">Returns & Exchanges</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">COMPANY</h3>
+          <ul class="moodk-footer__links">
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="moodk-footer__col">
+          <h3 class="moodk-footer__title">FOLLOW US</h3>
+          <div class="moodk-footer__socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
+                class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="moodk-footer__middle-spacer"></div>
+
+      <div class="moodk-footer__bottom">
+        <p class="moodk-footer__legal-text">
+          © 2026 MOODK. All rights reserved. <span class="moodk-footer__pipe">|</span>
+          <a href="#">Privacy Policy</a> <span class="moodk-footer__pipe">|</span>
+          <a href="../assets/documents/MOODk-Terms-and-Conditions.pdf" target="_blank">Terms & Conditions</a> <span class="moodk-footer__pipe">|</span>
+          <a href="#">Accessibility</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-panel">
+      <div class="search-panel__header">
+        <i class="fa-solid fa-magnifying-glass search-panel__icon"></i>
+        <input type="text" id="search-panel-input" class="search-panel__input" placeholder="Search products..."
+          autocomplete="off">
+        <button class="search-panel__close" id="search-panel-close" aria-label="Close search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="search-panel__divider"></div>
+      <div class="search-panel__results" id="search-panel-results"></div>
+    </div>
+  </div>
+
+  <script src="../js/wishlist.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/auth.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Update cart count badge in navbar (should be 0)
+      if (typeof updateCartBadge === 'function') {
+        updateCartBadge();
+      }
+
+      let order = null;
+      const urlParams = new URLSearchParams(window.location.search);
+      const requestedOrderId = urlParams.get('order') || urlParams.get('id');
+
+      // 1. Look up specific order in moodkOrders if query param is present
+      if (requestedOrderId) {
+        try {
+          const rawOrders = localStorage.getItem('moodkOrders');
+          if (rawOrders) {
+            const orders = JSON.parse(rawOrders);
+            if (Array.isArray(orders)) {
+              order = orders.find(o =>
+                o && o.id && (
+                  o.id === requestedOrderId ||
+                  o.id.replace('#', '') === requestedOrderId.replace('#', '') ||
+                  o.id.toLowerCase() === requestedOrderId.toLowerCase()
+                )
+              );
+            }
+          }
+        } catch (e) {
+          console.error('Error finding order by ID:', e);
+        }
+      }
+
+      // 2. Fallback to latest order
+      if (!order) {
+        try {
+          const raw = localStorage.getItem('moodkLatestOrder');
+          if (raw) {
+            order = JSON.parse(raw);
+          }
+        } catch (e) {
+          console.error('Error reading moodkLatestOrder for receipt:', e);
+        }
+      }
+
+      // 3. Fallback to first order in history
+      if (!order) {
+        try {
+          const rawOrders = localStorage.getItem('moodkOrders');
+          if (rawOrders) {
+            const orders = JSON.parse(rawOrders);
+            if (Array.isArray(orders) && orders.length > 0) {
+              order = orders[0];
+            }
+          }
+        } catch (e) { }
+      }
+
+      // 4. Fallback demo order if visited directly without any data
+      if (!order) {
+        order = {
+          id: 'MOODK-35965',
+          date: 'August 14, 2026',
+          customer: {
+            name: 'Marwan Shamekh',
+            email: 'marwan@gmail.com',
+            phone: '0107018266'
+          },
+          shippingAddress: {
+            address: 'Street 90, 5th Settlement, Building 4B',
+            apartment: '',
+            city: 'New Cairo',
+            governorate: 'Cairo'
+          },
+          payment: {
+            method: 'Visa •••• 4242',
+            cardLast4: '4242',
+            status: 'Paid — Demo'
+          },
+          subtotal: 1299,
+          shippingFee: 0,
+          total: 1299,
+          currency: 'EGP',
+          items: [
+            {
+              name: 'Classic Oxford Cotton Shirt',
+              size: 'XS',
+              colorName: 'White',
+              price: 1299,
+              quantity: 1
+            }
+          ]
+        };
+      }
+
+      // Populate Order ID & Date
+      document.getElementById('receipt-order-id').textContent = order.id || 'MOODK-35965';
+      document.getElementById('receipt-order-date').textContent = order.date || 'August 14, 2026';
+
+      const isOrderCancelled = (order.orderStatus || order.status || '').toUpperCase() === 'CANCELLED';
+      const statusPill = document.getElementById('receipt-status-pill');
+      if (statusPill) {
+        if (isOrderCancelled) {
+          statusPill.textContent = 'CANCELLED';
+          statusPill.style.backgroundColor = '#FEF2F2';
+          statusPill.style.color = '#DC2626';
+          statusPill.style.borderColor = '#FECACA';
+        } else {
+          statusPill.textContent = (order.payment?.status || 'PAID — DEMO').toUpperCase();
+        }
+      }
+
+      // Populate Customer Info
+      const cust = order.customer || {};
+      document.getElementById('receipt-customer-name').textContent = cust.name || 'Customer';
+      document.getElementById('receipt-customer-email').textContent = cust.email || '';
+      document.getElementById('receipt-customer-phone').textContent = cust.phone || '';
+
+      // Populate Shipping Address
+      const addr = order.shippingAddress || {};
+      const fullAddrLine = [addr.address, addr.apartment].filter(Boolean).join(', ');
+      document.getElementById('receipt-shipping-address').textContent = fullAddrLine || 'Street Address';
+      document.getElementById('receipt-shipping-city').textContent = `${addr.city || ''}${addr.governorate ? ', ' + addr.governorate : ''}, Egypt`;
+
+      // Populate Items
+      const itemsContainer = document.getElementById('receipt-items-list');
+      const currency = order.currency || 'EGP';
+
+      if (itemsContainer && Array.isArray(order.items) && order.items.length > 0) {
+        itemsContainer.innerHTML = order.items.map(item => {
+          const qty = parseInt(item.quantity, 10) || 1;
+          const unitPrice = item.price || 0;
+          const rowTotal = unitPrice * qty;
+
+          const sizeInfo = item.size ? `Size: ${item.size}` : '';
+          const colorInfo = (item.colorName || item.color) ? `Color: ${item.colorName || item.color}` : '';
+          const metaStr = [sizeInfo, colorInfo].filter(Boolean).join('   ');
+
+          return `
+            <div class="receipt-item-block">
+              <div class="receipt-item-name">${item.name}</div>
+              ${metaStr ? `<div class="receipt-item-meta">${metaStr}</div>` : ''}
+              <div class="receipt-item-pricing">
+                <span>${qty} x ${currency} ${unitPrice.toLocaleString()}</span>
+                <span>${currency} ${rowTotal.toLocaleString()}</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Populate Totals
+      const subtotal = order.subtotal || order.total || 0;
+      const total = order.total || subtotal;
+
+      document.getElementById('receipt-subtotal').textContent = `${currency} ${subtotal.toLocaleString()}`;
+      document.getElementById('receipt-grand-total').textContent = `${currency} ${total.toLocaleString()}`;
+
+      // Populate Payment Method & Status
+      const paymentMethodText = order.payment?.method || (order.payment?.cardLast4 ? `Visa •••• ${order.payment.cardLast4}` : 'Credit / Debit Card');
+      document.getElementById('receipt-payment-method').textContent = paymentMethodText;
+      document.getElementById('receipt-payment-status').textContent = order.payment?.status || 'Paid — Demo';
+    });
+  </script>
+</body>
+
+</html>

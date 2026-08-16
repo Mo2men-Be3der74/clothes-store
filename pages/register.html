@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="auth-page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOODK</title>
+
+  <link rel="stylesheet" href="../css/auth.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body class="auth-page">
+
+  <main class="auth-wrapper-centered">
+
+    <div class="auth-card">
+
+      <div class="auth-card__header">
+        <a href="../index.html" class="auth-card__logo">MOODK</a>
+        <h1 class="auth-card__title">CREATE YOUR ACCOUNT</h1>
+        <p class="auth-card__subtitle">Join MOODk to discover contemporary fashion.</p>
+      </div>
+
+      <div class="auth-alert" id="register-alert"></div>
+
+      <form id="moodk-register-form" novalidate>
+
+        <div class="auth-group">
+          <label for="reg-name" class="auth-label">Full Name</label>
+          <input type="text" id="reg-name" class="auth-input" placeholder="John Doe" autocomplete="name" required>
+          <div class="auth-field-error" id="reg-name-error"></div>
+        </div>
+
+        <div class="auth-group">
+          <label for="reg-email" class="auth-label">Email</label>
+          <input type="email" id="reg-email" class="auth-input" placeholder="john@example.com" autocomplete="email"
+            required>
+          <div class="auth-field-error" id="reg-email-error"></div>
+        </div>
+
+        <div class="auth-group">
+          <label for="reg-password" class="auth-label">Password</label>
+          <div class="auth-input-wrap">
+            <input type="password" id="reg-password" class="auth-input" placeholder="At least 6 characters"
+              autocomplete="new-password" required>
+            <button type="button" class="auth-eye-toggle" data-target="reg-password"
+              aria-label="Toggle password visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+          <div class="auth-field-error" id="reg-password-error"></div>
+        </div>
+
+        <div class="auth-group">
+          <label for="reg-confirm" class="auth-label">Confirm Password</label>
+          <div class="auth-input-wrap">
+            <input type="password" id="reg-confirm" class="auth-input" placeholder="Re-enter your password"
+              autocomplete="new-password" required>
+            <button type="button" class="auth-eye-toggle" data-target="reg-confirm"
+              aria-label="Toggle password visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+          <div class="auth-field-error" id="reg-confirm-error"></div>
+        </div>
+
+        <button type="submit" class="auth-btn">
+          <span>CREATE ACCOUNT</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+
+      </form>
+
+      <div class="auth-card__footer">
+        <span>Already have an account?</span>
+        <a href="login.html">Log in</a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="../js/products.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+
+</html>
