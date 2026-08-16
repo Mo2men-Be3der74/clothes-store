@@ -30,22 +30,12 @@ MOODk is designed to work across different screen sizes:
 * CSS Animations & Transitions
 * Responsive Design
 * DOM Manipulation
-* Interactive UI Components
-* GSAP / ScrollTrigger where applicable
 
 ### Browser Storage
 
 * `localStorage`
 * `sessionStorage`
 
-Used for maintaining client-side data such as:
-
-* Cart
-* Wishlist
-* User session
-* Orders
-* Product information
-* Order timing
 
 ---
 
@@ -107,7 +97,6 @@ Possible future improvements include:
 * Server-side search and filtering.
 * Email order confirmations.
 * Cloud image storage.
-* REST API integration.
 
 ---
 
