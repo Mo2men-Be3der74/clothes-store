@@ -412,28 +412,3 @@
   box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
 }
 
-.product-extra-info {
-  border-top: 1px solid #e8e5df;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.product-extra-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  font-size: 13px;
-  color: #555;
-}
-
-.product-extra-item i {
-  font-size: 16px;
-  color: #111;
-  margin-top: 2px;
-}
-
-.product-extra-item strong {
-  color: #111;
-}
