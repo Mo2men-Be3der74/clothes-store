@@ -31,14 +31,7 @@
     padding: 90px 48px 100px;
   }
 
-  /* Brands Grid */
-  .brands-section {
-    padding: 90px 40px;
-  }
 
-  .brands-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
 }
 
 
@@ -179,26 +172,7 @@
     padding: 28px 24px;
   }
 
-  /* Brands Grid */
-  .brands-section {
-    padding: 70px 30px;
-  }
 
-  .brands-header {
-    margin-bottom: 44px;
-  }
-
-  .brands-header__title {
-    font-size: 32px;
-  }
-
-  .brands-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .brand-card {
-    height: 135px;
-  }
 
   /* Search Panel */
   .search-panel {
@@ -514,31 +488,6 @@
     font-size: 22px;
   }
 
-  /* Brands Section Mobile */
-  .brands-section {
-    padding: 54px 20px;
-  }
-
-  .brands-header {
-    margin-bottom: 36px;
-  }
-
-  .brands-header__title {
-    font-size: 28px;
-  }
-
-  .brands-header__desc {
-    font-size: 14px;
-  }
-
-  .brands-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .brand-card {
-    height: 125px;
-    padding: 16px 10px;
-  }
 
   /* Search Panel Mobile */
   .search-panel {

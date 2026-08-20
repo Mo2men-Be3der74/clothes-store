@@ -32,6 +32,17 @@ if (navbar) {
     handleScroll();
 }
 
+// Brands Marquee Ticker Initialization
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".brands-ticker__track");
+    if (track && track.children.length === 1) {
+        const clone = track.children[0].cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        track.appendChild(clone);
+    }
+});
+
+
 
 
 

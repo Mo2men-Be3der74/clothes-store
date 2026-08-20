@@ -611,124 +611,92 @@ body::selection {
       transform: scale(1.05);
 }
 
-
-
-.brands-section {
-      background-color: #faf9f6;
-      padding: 90px 40px;
+/* brands auto scrolling  */
+.brands-ticker {
       width: 100%;
-      box-sizing: border-box;
-      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-
-.brands-header {
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto 54px auto;
-}
-
-.brands-header__subtitle {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #555555;
-      margin-bottom: 12px;
-}
-
-.brands-header__title {
-      font-size: 38px;
-      font-weight: 700;
-      color: #111111;
-      margin: 0 0 14px 0;
-      letter-spacing: -0.5px;
-      line-height: 1.2;
-}
-
-.brands-header__desc {
-      font-size: 15px;
-      color: #666666;
-      margin: 0 0 6px 0;
-      line-height: 1.6;
-}
-
-.brands-header__tagline {
-      font-size: 14px;
-      color: #888888;
-      margin: 0;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-}
-
-.brands-container {
-      max-width: 1280px;
-      margin: 0 auto;
-}
-
-.brands-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      border-top: 1px solid #e5e5e3;
-      border-left: 1px solid #e5e5e3;
-      background-color: #ffffff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-}
-
-.brand-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 140px;
-      padding: 20px 16px;
-      box-sizing: border-box;
-      border-right: 1px solid #e8e8e6;
-      border-bottom: 1px solid #e8e8e6;
-      background-color: #ffffff;
-      transition: background-color 0.3s ease;
+      background-color: #000000;
+      color: #FFFFFF;
+      overflow: hidden;
       user-select: none;
-      cursor: pointer;
-}
-
-.brand-card:hover {
-      background-color: #fafafa;
-}
-
-.brand-card__logo {
-      width: 100%;
-      height: 48px;
+      padding: 18px 0;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.brand-card:hover .brand-card__logo {
-      transform: scale(1.05);
+.brands-ticker__track {
+      display: flex;
+      width: max-content;
+      white-space: nowrap;
+      animation: brandsMarquee 28s linear infinite;
+      will-change: transform;
 }
 
-.brand-card__name {
+.brands-ticker:hover .brands-ticker__track {
+      animation-play-state: paused;
+}
+
+.brands-ticker__group {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      padding-right: 36px;
+      flex-shrink: 0;
+}
+
+.brands-ticker__item {
       font-family: 'Manrope', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 3.5px;
       text-transform: uppercase;
-      color: #888888;
-      margin-top: 10px;
-      transition: color 0.3s ease;
+      color: #FFFFFF;
+      transition: opacity 0.3s ease;
+      cursor: default;
 }
 
-.brand-card:hover .brand-card__name {
-      color: #111111;
+.brands-ticker__item:hover {
+      opacity: 0.7;
 }
 
-.brand-logo {
-      max-width: 110px;
-      max-height: 40px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      display: block;
+.brands-ticker__dot {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.4);
+      display: inline-block;
+      line-height: 1;
 }
+
+@keyframes brandsMarquee {
+      0% {
+            transform: translateX(0);
+      }
+      100% {
+            transform: translateX(-50%);
+      }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+      .brands-ticker {
+            padding: 14px 0;
+      }
+      .brands-ticker__group {
+            gap: 22px;
+            padding-right: 22px;
+      }
+      .brands-ticker__item {
+            font-size: 13px;
+            letter-spacing: 2.5px;
+      }
+      .brands-ticker__dot {
+            font-size: 8px;
+      }
+}
+
+
+
+
+
+
