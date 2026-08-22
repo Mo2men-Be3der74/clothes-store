@@ -556,6 +556,22 @@
     border-radius: 4px;
   }
 
+  .contact-success-card {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.contact-success-card__desc {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+}
+
   .contact-section-heading {
     font-size: 22px;
   }
